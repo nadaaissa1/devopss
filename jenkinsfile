@@ -22,7 +22,7 @@ pipeline{
 				bat """mvn -version"""
 			}
 		}
-
+//
 
 		 stage ("clean"){
 		 	steps{

@@ -1,7 +1,7 @@
 pipeline{
 
 	environment{
-		registry = 'emir1996/devops'
+		registry = 'nada9623/devops96'
 		registryCredential= 'dockerHub'
 		dockerImage = ''
 	}
@@ -73,6 +73,7 @@ pipeline{
 				} 
 			}
 		}
+		//
 
 		stage('Cleaning up'){
 			steps{

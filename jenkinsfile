@@ -42,6 +42,7 @@ pipeline{
 		 		bat """mvn test"""
 		 	}
 		 }
+		 //
 
 
 		 stage ("Analyse avec Sonar"){

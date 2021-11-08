@@ -59,7 +59,7 @@ pipeline{
 
 		 stage('email'){
 			steps{
-			mail bcc: '', body: 'Build Success', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'nada.aissanajjar1@esprit.com'
+			mail bcc: '', body: 'Build Success', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'nada.aissa9623@gmail.com'
 			}
 		}
 

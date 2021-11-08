@@ -81,8 +81,15 @@ pipeline{
 				bat "docker rmi $registry:$BUILD_NUMBER" 
 			}
 		}
+
+		stage('email'){
+			steps{
+			mail bcc: '', body: 'Build Success', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'nada.aissanajjar1@esprit.com'
+			}
+		}
 		
 	}
+	
 
 	post{
 		success{

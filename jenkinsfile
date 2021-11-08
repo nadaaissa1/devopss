@@ -57,6 +57,12 @@ pipeline{
 		 	}
 		 }
 
+		 stage('email'){
+			steps{
+			mail bcc: '', body: 'Build Success', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'nada.aissanajjar1@esprit.com'
+			}
+		}
+
 		 stage('Building our image'){
 			steps{ 
 				script{ 
@@ -82,11 +88,7 @@ pipeline{
 			}
 		}
 
-		stage('email'){
-			steps{
-			mail bcc: '', body: 'Build Success', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'nada.aissanajjar1@esprit.com'
-			}
-		}
+		
 		
 	}
 	

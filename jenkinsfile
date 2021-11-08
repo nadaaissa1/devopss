@@ -56,7 +56,7 @@ pipeline{
 		 		bat """mvn clean package deploy:deploy-file -DgroupId=tn.esprit.spring -DartifactId=Timesheet-spring-boot-core-data-jpa-mvc-REST-1 -Dversion=1.0 -DgeneratePom=true-Dpackaging=war -DrepositoryId=deploymentRepo -Durl=http://localhost:8081/repository/maven-releases/ -Dfile=target/Timesheet-spring-boot-core-data-jpa-mvc-REST-1-1.0.war"""
 		 	}
 		 }
-		 
+
 		 stage('Building our image'){
 			steps{ 
 				script{ 
@@ -81,19 +81,15 @@ pipeline{
 				bat "docker rmi $registry:$BUILD_NUMBER" 
 			}
 		}
-		stage('email'){
-			steps{
-			mail bcc: '', body: 'jknlk', cc: '', from: '', replyTo: '', subject: 'jhbj', to: 'houissaghassen@gmail.com'
-			}
-		}
+		
 	}
 
 	post{
 		success{
-			emailext body: 'Build success', subject: 'Jenkins', to:'houissaghassen@gmail.com'
+			emailext body: 'Build success', subject: 'Jenkins', to:'nada.aissanajjar1@esprit.com'
 		}
 		failure{
-			emailext body: 'Build failure', subject: 'Jenkins', to:'houissaghassen@gmail.com'
+			emailext body: 'Build failure', subject: 'Jenkins', to:'nada.aissanajjar1@esprit.com'
 		}
 
 	}
